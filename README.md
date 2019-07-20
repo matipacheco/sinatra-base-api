@@ -13,4 +13,4 @@ A basic (and deployable) Ruby + Sinatra API
 - [How to use Bundler with Sinatra](https://bundler.io/v2.0/guides/sinatra.html)
 - [Sinatra Dockerfile](https://github.com/tongueroo/sinatra/blob/master/Dockerfile)
 - [Sinatra ActiveRecord Extension](https://github.com/janko/sinatra-activerecord)
--[Graphql + Sinatra](https://medium.com/hash32/graphql-server-with-sinatra-ruby-part-1-fdd664170715)
+- [Graphql + Sinatra](https://medium.com/hash32/graphql-server-with-sinatra-ruby-part-1-fdd664170715)
