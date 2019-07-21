@@ -42,10 +42,6 @@ end
 
 private
 
-def clean(data)
-  data.gsub!(/[^0-9A-Za-z]/, '')
-end
-
 def handle_error_in_development(e)
   { status => 500, error => { message => e.message, backtrace => e.backtrace }, data => {} }.to_json
 end
