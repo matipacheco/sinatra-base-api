@@ -1,0 +1,47 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: sans-serif !important;
+  font-size: 1rem;
+  color:#4e4e4e;
+  background-color: #e2e2e2;
+  background-size: cover;
+}
+
+.card-login {
+  max-width: 26rem;
+}
+
+.user-icon {
+  background-image: url('/user.svg');
+  width: 66px;
+  height: 66px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 30px ;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body {
+  border-radius: 4px;
+  padding: 2rem;
+  background-color: #FFF;
+  padding-top: 0;
+}
+
+.evil-laugh {
+  background-image: url('/evil-laugh.gif');
+  width:100%;
+  height:0;
+  padding-bottom:57%;
+  position:relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
