@@ -16,6 +16,10 @@ helpers do
   def logged_in?
     session[:user_logged_in]
   end
+
+  def protected!
+    halt 401,"You are not authorized to see this page!" unless logged_in?
+  end
 end
 
 get '/' do
@@ -23,6 +27,7 @@ get '/' do
 end
 
 get '/index' do
+  protected!
   erb :index
 end
 
