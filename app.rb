@@ -4,6 +4,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 
 require_relative 'config/settings'
+require_relative 'app/models/user'
 require_relative 'app/models/example_model'
 require_relative 'app/graphql/api_schema'
 
@@ -39,6 +40,8 @@ post '/graphql' do
     handle_error_in_development e
   end
 end
+
+
 
 private
 
