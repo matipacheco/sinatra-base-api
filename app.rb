@@ -30,12 +30,11 @@ post '/login' do
   user = User.exists?(email: params['email'], password: params['password'])
   session['user_logged_in'] = user
   
-  if user
-    redirect '/index'
-  else
+  unless user
     @error = true
-    erb :login
   end
+  
+  redirect '/index'
 end
 
 post '/logout' do
