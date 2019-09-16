@@ -10,6 +10,39 @@ require_relative 'app/graphql/api_schema'
 
 require "sinatra/reloader" if development?
 
+enable :sessions
+
+helpers do
+  def logged_in?
+    session[:user_logged_in]
+  end
+end
+
+get '/' do
+  erb :login
+end
+
+get '/index' do
+  erb :index
+end
+
+post '/login' do
+  user = User.exists?(email: params['email'], password: params['password'])
+  session['user_logged_in'] = user
+  
+  if user
+    redirect '/index'
+  else
+    @error = true
+    erb :login
+  end
+end
+
+post '/logout' do
+  session.clear
+  redirect '/'
+end
+
 get '/examples' do
   ExampleModel.all.to_json
 end
@@ -40,8 +73,6 @@ post '/graphql' do
     handle_error_in_development e
   end
 end
-
-
 
 private
 
